@@ -1,0 +1,15 @@
+dealerName:Mark Wilson
+contactNo:011 3767676
+location:Kandy
+itemName:Network Switch
+itemBrand:Lansan
+itmPrice:Rs.5500.00
+itmQuantity:20
+itemName:Key Board
+itemBrand:Jedel
+itmPrice:Rs.7000.00
+itmQuantity:18
+itemName:Head Phones
+itemBrand:JBL
+itmPrice:Rs.9750.00
+itmQuantity:10

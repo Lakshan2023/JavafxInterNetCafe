@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.InventoryMainController">
+   <AnchorPane prefHeight="546.0" prefWidth="1028.0">
+      <BorderPane layoutX="-14.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="46.0" prefWidth="1118.0" BorderPane.alignment="CENTER">
+               <AnchorPane fx:id="InventoryLabel" layoutX="14.0" prefHeight="46.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                     <Label layoutX="24.0" layoutY="6.0" text="OneNet Cafe Inventory System" textFill="WHITE">
+                        <font>
+                           <Font name="Leelawadee UI Bold" size="24.0" />
+                        </font>
+                     </Label>
+                     <Button fx:id="close" layoutX="1032.0" layoutY="11.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" />
+                     <ImageView fx:id="closing" fitHeight="33.0" fitWidth="34.0" layoutX="1035.0" layoutY="7.0" onMouseClicked="#ExitTheProgram" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/close.png" />
+                        </image>
+                     </ImageView>
+                  </children></AnchorPane>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="554.0" prefWidth="242.0" BorderPane.alignment="CENTER">
+               <AnchorPane fx:id="SidePane" layoutX="21.0" layoutY="6.0" prefHeight="538.0" prefWidth="227.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="6.0">
+                  <children>
+                     <ImageView fitHeight="94.0" fitWidth="93.0" layoutX="58.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/Admin.png" />
+                        </image>
+                     </ImageView>
+                     <Label layoutX="66.0" layoutY="125.0" prefHeight="47.0" prefWidth="86.0" text="Hello">
+                        <font>
+                           <Font name="System Bold" size="32.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="UserName" layoutX="9.0" layoutY="162.0" prefHeight="50.0" prefWidth="190.0" text="      Lakshan">
+                        <font>
+                           <Font name="Impact" size="36.0" />
+                        </font>
+                     </Label>
+                     <Line endX="107.39999389648438" endY="3.0517578125E-5" layoutX="110.0" layoutY="213.0" startX="-100.0" />
+                     <AnchorPane fx:id="logArea" layoutX="63.0" layoutY="404.0" onMouseClicked="#ExitTheProgram" prefHeight="90.0" prefWidth="92.0">
+                        <children>
+                           <ImageView fx:id="exit" fitHeight="55.0" fitWidth="47.0" layoutX="23.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@images/logout.png" />
+                              </image>
+                           </ImageView>
+                           <Label layoutX="25.0" layoutY="73.0" text="Exit">
+                              <font>
+                                 <Font name="System Bold" size="26.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </AnchorPane>
+                  </children>
+               </AnchorPane>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="554.0" prefWidth="805.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="mainPane" layoutX="10.0" layoutY="4.0" prefHeight="543.0" prefWidth="855.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="4.0">
+                     <children>
+                        <AnchorPane fx:id="BackImage" layoutX="32.0" layoutY="23.0" prefHeight="99.0" prefWidth="807.0">
+                           <children>
+                              <Label layoutX="189.0" layoutY="24.0" prefHeight="51.0" prefWidth="482.0" text="Welcome to One Net Cafe ">
+                                 <font>
+                                    <Font name="System Bold" size="38.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="ViewItemTile" layoutX="32.0" layoutY="350.0" onMouseClicked="#GoToViewItems" prefHeight="150.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <Label layoutX="25.0" layoutY="97.0" text="View Items">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="74.0" fitWidth="68.0" layoutX="58.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/ViewItems.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="GenerateDealer" layoutX="239.0" layoutY="350.0" onMouseClicked="#GoTOGenerateDealers" prefHeight="150.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <Label layoutX="11.0" layoutY="82.0" prefHeight="35.0" prefWidth="163.0" text="     Generate" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="51.0" layoutY="110.0" text="Dealers">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="66.0" fitWidth="75.0" layoutX="62.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/generatedealers.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="ViewDealerDetail" layoutX="442.0" layoutY="350.0" onMouseClicked="#GoToViewDealerDetails" prefHeight="150.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <Label layoutX="30.0" layoutY="84.0" text="View Dealer ">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="54.0" layoutY="111.0" text="Details">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="67.0" fitWidth="66.0" layoutX="63.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/viewdealers.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="DeleteItemTile" layoutX="239.0" layoutY="150.0" onMouseClicked="#GoToDeleteItems" prefHeight="150.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <Label layoutX="15.0" layoutY="97.0" text="Delete Items">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="88.0" fitWidth="74.0" layoutX="54.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/deleteItems.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="ViewSelectedDealer" layoutX="652.0" layoutY="347.0" onMouseClicked="#GoToSelectedDealer" prefHeight="155.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <ImageView fitHeight="64.0" fitWidth="71.0" layoutX="57.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/selectedDealer.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="17.0" layoutY="90.0" text="View Selected ">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="56.0" layoutY="116.0" text="Dealer">
+                                 <font>
+                                    <Font name="System Bold" size="23.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="UpdateItemTile" layoutX="442.0" layoutY="150.0" onMouseClicked="#GoToUpdateItems" prefHeight="150.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <Label layoutX="10.0" layoutY="97.0" text="Update Items">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="77.0" fitWidth="89.0" layoutX="54.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/updateItems.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="SaveItemTile" layoutX="652.0" layoutY="150.0" onMouseClicked="#GoToSaveItems" prefHeight="150.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <Label layoutX="27.0" layoutY="97.0" text="Save Items">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="82.0" fitWidth="78.0" layoutX="54.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/saveItems.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="AddItemTile" layoutX="32.0" layoutY="150.0" onMouseClicked="#GoToAddItems" prefHeight="150.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <Label layoutX="30.0" layoutY="97.0" text="Add Items">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="71.0" fitWidth="134.0" layoutX="57.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/addItems.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </AnchorPane>
+
+   <stylesheets>
+      <URL value="@Hello.css" />
+   </stylesheets>
+</StackPane>

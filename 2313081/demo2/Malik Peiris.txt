@@ -1,0 +1,15 @@
+dealerName:Malik Peiris
+contactNo:011 2756342
+location:Negambo
+itemName:Webcam
+itemBrand:Sony
+itmPrice:Rs.8750.00
+itmQuantity:15
+itemName:Telephone
+itemBrand:Panasonic
+itmPrice:Rs.7500.00
+itmQuantity:4
+itemName:computer chairs
+itemBrand:Damro
+itmPrice:Rs.27500.00
+itmQuantity:10

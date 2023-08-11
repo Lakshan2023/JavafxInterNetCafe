@@ -1,0 +1,15 @@
+dealerName:John Fernando
+contactNo:011 2573974
+location:Rajagiriya
+itemName:Workstation Tables
+itemBrand:Damro
+itmPrice:Rs.45000.00
+itmQuantity:10
+itemName:Router
+itemBrand:Dialog
+itmPrice:Rs.5000.00
+itmQuantity:5
+itemName:Multi port usb Hub
+itemBrand:Insten
+itmPrice:Rs.7000.00
+itmQuantity:10

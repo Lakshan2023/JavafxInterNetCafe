@@ -1,0 +1,15 @@
+dealerName:Dinesh Gomes
+contactNo:011 2868657
+location:Nugegoda
+itemName:Computer mouse
+itemBrand:Asus
+itmPrice:Rs.7250.00
+itmQuantity:16
+itemName:Computer Chairs
+itemBrand:Finex
+itmPrice:Rs.15500.00
+itmQuantity:13
+itemName:Laptop
+itemBrand:Acer
+itmPrice:Rs.228568.00
+itmQuantity:4

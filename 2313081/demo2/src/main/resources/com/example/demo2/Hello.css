@@ -1,0 +1,770 @@
+#BackImage{
+    -fx-background-image: url("images/backgroundimage.jpg");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-radius: 20px;
+}
+
+#BackImage:hover{
+    -fx-background-color: red;
+    -fx-opacity: 1.0;
+}
+
+.topic{
+    -fx-background-radius: 10px;
+    -fx-background-color: linear-gradient(#ddd6f3 , #faaca8);
+    -fx-cursor: hand;
+}
+
+.topic:hover{
+    -fx-background-color: linear-gradient(#4ca1af  , #c4e0e5);
+}
+
+.topic:pressed{
+    -fx-background-color: linear-gradient(#02aab0 , #00cdac);
+}
+
+#mainPane{
+    -fx-background-color: black;
+    -fx-background-radius: 10px;
+}
+
+#SidePane{
+    -fx-background-color: linear-gradient(rgb(245, 167, 191) -6.2%, rgb(201, 218, 238) 46.4%, rgb(164, 240, 229) 86.4%);
+    -fx-background-radius: 10px;
+}
+
+#logArea{
+    -fx-background-radius: 100px;
+}
+
+#logArea:hover{
+    -fx-background-color: linear-gradient(#4ca1af  , #c4e0e5);
+}
+
+#InventoryLabel{
+    -fx-background-color: #02224d;
+}
+
+#close{
+    -fx-background-color: #02224d;
+    -fx-cursor: hand;
+}
+
+#close{
+    -fx-background-color: #02224d;
+    -fx-cursor: hand;
+}
+
+#close:hover{
+    -fx-background-color: #14396c;
+}
+
+#close:pressed{
+    -fx-background-color: #284369;
+}
+
+#ItemViewPane{
+    -fx-background-color: #6c6c6c;
+    -fx-opacity: 0.8;
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+
+}
+
+#fullTableView{
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-style: solid;
+    -fx-border-color: #a9a6a6;
+    -fx-border-width: 2px;
+    -fx-background-color: #a9a6a6;
+}
+
+#ViewItemsHeadingPane{
+    -fx-text-fill: black;
+    -fx-background-radius: 10px;
+    -fx-background-color: #c7ac2f;
+}
+
+.ViewTableHeading{
+    -fx-background-color: linear-gradient(to top, #c7ac2f, white);
+    -fx-pref-height: 35px;
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+}
+
+.ViewTableHeading:odd{
+    -fx-background-color: transparent;
+}
+
+.ViewTableHeading:even{
+    -fx-background-color: transparent;
+}
+
+#ItemViewTable{
+    -fx-border-radius: 10px;
+}
+
+#TextPane{
+    -fx-text-fill: black;
+}
+
+#HeadingCover{
+    -fx-background-color: #a9a6a6;
+     -fx-border-color:transparent;
+    -fx-border-width: 2px;
+}
+#TotalPricePane{
+   -fx-background-radius: 10px;
+    -fx-background-color: rgb(3, 52, 34);
+}
+
+#TotalItems{
+    -fx-background-radius: 10px;
+    -fx-background-color: rgb(3, 52, 34);
+}
+
+#ViewIteSearchBar{
+    -fx-background-radius: 12px;
+}
+
+#ItemSidePane{
+    -fx-background-color: linear-gradient(rgb(245, 167, 191) -6.2%, rgb(201, 218, 238) 46.4%, rgb(164, 240, 229) 86.4%);
+    -fx-background-radius: 10px;
+}
+
+.Menu{
+    -fx-background-color: #02224d;
+    -fx-background-radius: 10px;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.Menu:hover{
+    -fx-background-color: #056b72;
+}
+
+
+.Menu:pressed{
+    -fx-background-color: #22666b;
+}
+
+#AddingItemPane{
+    -fx-background-radius: 15px;
+    -fx-background-color: linear-gradient(#b2b2b2, #949494);
+}
+
+#AddingWhitePane{
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+}
+
+.AddInputTextFields{
+    -fx-background-radius:8px;
+    -fx-border-color: #808080;
+    -fx-border-radius: 8px;
+}
+
+.AddInputTextFields:focused{
+  -fx-background-color: linear-gradient(to right, rgb(236, 243, 255) 46.4%, rgb(216, 255, 247) 86.4%);
+}
+#InnerPane{
+    -fx-background-radius: 10px;
+    -fx-background-color: #d7d7d7;
+}
+
+#AddItemDetailsHereMassage{
+    -fx-background-radius: 2px;
+     -fx-padding: 5px;
+}
+
+#AddItemsTitlePaneBackground{
+    -fx-background-color: linear-gradient(to top, #ababab, orange);
+    -fx-background-radius: 10px;
+}
+
+#AddItemsTitlePane2{
+    -fx-background-color: #d7d7d7;
+}
+
+.InputTag{
+    -fx-background-color: linear-gradient(to top, #ababab, #a0a97c);
+    -fx-padding: 5px;
+    -fx-background-radius: 1px;
+    -fx-margin: 10px;
+}
+
+.InputButton{
+   -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+#ImageInputPane{
+    -fx-background-radius: 10px;
+    -fx-background-color: white;
+}
+
+#ImageInputButton{
+   -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+#DateInput{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+
+#ItemDeleteSidePane1{
+    -fx-background-color: linear-gradient(rgb(245, 167, 191) -6.2%, rgb(201, 218, 238) 46.4%, rgb(164, 240, 229) 86.4%);
+    -fx-background-radius: 10px;
+}
+
+#ItemUpdatePane{
+    -fx-background-color: linear-gradient(#b2b2b2, #949494);
+    -fx-background-radius: 10px;
+}
+
+#ItemUpdateTablePane{
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+}
+
+#UpdateFieldPane{
+    -fx-background-radius: 10px;
+    -fx-background-color: #cbcbcb;
+}
+
+#ImageUpdatePane{
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+}
+
+#ImageUpdateImportButton{
+    -fx-background-radius: 5px;
+    -fx-background-color: #c7ac2f;
+}
+
+#ImageUpdateImportButton:hover{
+    -fx-background-color: gold;
+    -fx-text-fill: black;
+}
+
+#UpdateButton{
+    -fx-background-radius: 10px;
+    -fx-background-color: #237524;
+    -fx-cursor: hand;
+
+}
+
+#UpdateButton:hover{
+    -fx-background-color: #4c7681;
+    -fx-text-fill: black;
+}
+
+#UpdateDetailMiddlePane{
+    -fx-background-radius: 10px;
+    -fx-background-color: white;
+}
+
+#UpdateDetailClosePane{
+    -fx-background-color: #cbcbcb;
+}
+
+.UpdateBox{
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-font-family: "Times New Roman";
+}
+
+#UpdateDetailsMainHeading{
+    -fx-background-color: linear-gradient(to left, #237524, #c7ac2f);
+    -fx-background-radius: 10px;
+}
+
+#UpdateSearchButton{
+    -fx-background-color:  rgb(164, 240, 229);
+    -fx-border-style: solid;
+    -fx-border-color: #939191;
+    -fx-cursor: hand;
+}
+
+#UpdateSearchButton:hover{
+    -fx-background-color: rgb(182, 234, 224);
+}
+
+#UpdateSearchButton:pressed{
+    -fx-background-color: rgb(197, 232, 224);
+}
+
+#ViewImageFilterButton{
+    -fx-background-radius: 10px;
+    -fx-background-color: #02224d;
+    -fx-cursor: hand;
+}
+
+#ViewImageFilterButton:hover{
+    -fx-background-color: #21657c;
+}
+
+#AddItemsButton{
+    -fx-background-color: #619a61;
+    -fx-cursor: hand;
+}
+
+#AddItemsButton:hover{
+    -fx-background-color: #aff5af;
+    -fx-text-fill: black;
+    -fx-border-color: green;
+    -fx-border-radius: 10px;
+}
+
+#AddItemsButton:pressed{
+    -fx-background-color: #9ec49e;
+    -fx-text-fill: black;
+    -fx-border-color: green;
+    -fx-border-radius: 10px;
+}
+
+
+#ClearItemsButton{
+    -fx-background-color: #6c541d;
+}
+
+
+#ClearItemsButton:hover{
+    -fx-background-color: #a99865;
+    -fx-text-fill: black;
+    -fx-border-color: #6c541d;
+    -fx-border-radius: 10px;
+}
+
+#ClearItemsButton:pressed{
+    -fx-background-color: #c5b587;
+    -fx-text-fill: black;
+    -fx-border-color: #6c541d;
+    -fx-border-radius: 10px;
+}
+
+#ImageInputButton{
+    -fx-background-color:#02224d;
+    -fx-cursor: hand;
+}
+
+#ImageInputButton:hover{
+    -fx-background-color: #364a67;
+}
+
+
+#ImageInputButton:pressed{
+    -fx-background-color: #4d5f7a;
+}
+
+
+#ItemDeletePane{
+    -fx-background-color: grey;
+    -fx-background-radius: 10px;
+}
+
+#DeleteTableViewPane{
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+}
+
+#ItemDeleteHeadingPane{
+    -fx-background-color: black;
+    -fx-background-radius: 10px;
+}
+
+#ItemDeleteSearchPane{
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+}
+
+#DeleteSearchBar{
+    -fx-background-radius: 10px;
+}
+
+#DeleteSearchButton{
+    -fx-background-radius: 10px;
+    -fx-background-color:  #02224d;
+    -fx-cursor: hand;
+}
+
+#DeleteSearchButton:hover{
+    -fx-background-color: #364a67;
+}
+
+
+#DeleteSearchButton:pressed{
+    -fx-background-color: #4d5f7a;
+}
+
+#DeleteButton{
+    -fx-background-radius: 10px;
+    -fx-background-color: maroon;
+    -fx-cursor: hand;
+}
+
+#DeleteButton:hover{
+    -fx-background-color: #724848;
+}
+
+#DeleteButton:pressed{
+    -fx-background-color: #9f7777;
+}
+
+.TableHeadingPane{
+    -fx-font-family: "Roboto Thin";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#9b9a9a,#a8f8f3);
+    -fx-pref-height: 40px;
+}
+
+.TableHeadingPane:even{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px;
+    -fx-background-color: transparent;
+
+}
+
+.TableHeadingPane:odd{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px;
+    -fx-background-color: transparent;
+}
+
+#DeleteViewItemImage{
+    -fx-padding: 0px;
+}
+
+#ItemDeleteTable{
+    -fx-border-color: transparent;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+
+#RandomDealerSelectionHeadingPane{
+    -fx-background-color: linear-gradient(#a8a8a8, #daffbd);
+    -fx-background-radius: 14px;
+}
+
+#SelectRandomDealerCutterPane{
+    -fx-background-color: #d0d0d0;
+}
+
+
+#RandomSelectionTablePane{
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+}
+
+#GenerateRandomDealersButton{
+    -fx-background-color: linear-gradient(#b4bd0c, #a8a8a8);
+    -fx-background-radius: 10px;
+    -fx-border-style: solid;
+    -fx-border-color: black;
+    -fx-border-radius: 10px;
+    -fx-cursor: hand;
+}
+
+#GenerateRandomDealersButton:hover{
+    -fx-background-color: linear-gradient(#c6ce2e, #d5d5d5);
+}
+
+#GenerateRandomDealersButton:pressed{
+    -fx-background-color: linear-gradient(#bdc443, #e0e0e0);
+}
+
+
+.RandomDealerTableHeading{
+    -fx-background-color: linear-gradient(#fafccf, #e7e0e0);
+    -fx-font-size: 15px;
+    -fx-min-height: 30px;
+    -fx-padding: 25px;
+}
+
+.RandomDealerTableHeading:even{
+    -fx-background-color: transparent;
+    -fx-min-height: 40px;
+    -fx-padding: 22px;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+
+.RandomDealerTableHeading:odd{
+    -fx-background-color: transparent;
+    -fx-min-height: 40px;
+    -fx-padding: 22px;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+
+
+
+#ItemUpdateSidePane{
+    -fx-background-color: linear-gradient(rgb(245, 167, 191) -6.2%, rgb(201, 218, 238) 46.4%, rgb(164, 240, 229) 86.4%);
+    -fx-background-radius: 10px;
+}
+
+#ItemInputSidePane{
+    -fx-background-color: linear-gradient(rgb(245, 167, 191) -6.2%, rgb(201, 218, 238) 46.4%, rgb(164, 240, 229) 86.4%);
+    -fx-background-radius: 10px;
+}
+
+
+#GenerateRandomDealerSidePane{
+    -fx-background-color: linear-gradient(rgb(245, 167, 191) -6.2%, rgb(201, 218, 238) 46.4%, rgb(164, 240, 229) 86.4%);
+    -fx-background-radius: 10px;
+}
+
+.ExitButtonStyler{
+    -fx-background-radius: 100px;
+    -fx-cursor: hand;
+}
+.ExitButtonStyler:hover{
+    -fx-background-color: linear-gradient(#4ca1af  , #c4e0e5);
+}
+
+.ExitButtonStyler:pressed{
+    -fx-background-color: linear-gradient(#5da6b4, #d3e7ec);
+}
+
+#SeeSelectedDealersSidePane{
+    -fx-background-color: linear-gradient(rgb(245, 167, 191) -6.2%, rgb(201, 218, 238) 46.4%, rgb(164, 240, 229) 86.4%);
+    -fx-background-radius: 10px;
+}
+
+#SelectedIndividualDealerSidePane{
+    -fx-background-color: linear-gradient(rgb(245, 167, 191) -6.2%, rgb(201, 218, 238) 46.4%, rgb(164, 240, 229) 86.4%);
+    -fx-background-radius: 10px;
+}
+
+#SelectedRandomDealersPane{
+    -fx-background-radius: 10px;
+    -fx-background-color: linear-gradient(#d9d8d8, #c4c4c4);
+}
+
+.backPaneWhite{
+  -fx-background-color: white;
+    -fx-background-radius: 10px;
+}
+
+.DealersIndividualTableHeading{
+    -fx-background-radius: 10px;
+    -fx-background-color: black;
+}
+
+.whiteShaperDealers{
+    -fx-background-color: white ;
+}
+
+#sortingMassage{
+    -fx-background-color: #b9c0ee;
+    -fx-background-radius: 10px;
+}
+
+#SelectedIndividualDealerPane{
+    -fx-background-color: linear-gradient(#a19999, lightgrey);
+    -fx-background-radius: 10px;
+}
+
+#SelectedDealerHeadingPane{
+    -fx-background-color: linear-gradient(#adadad, #b6b6b6);
+    -fx-background-radius: 10px;
+}
+
+#normalPaneSelectedPane{
+    -fx-background-color: linear-gradient(#a19999, lightgrey);
+}
+
+#SelectedDealerTablePane{
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+}
+
+#SelectedDealerSearchBarPane{
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+}
+
+#SearchBarPaneDealers{
+    -fx-background-radius: 10px;
+}
+
+#SearchDealerButton{
+    -fx-background-radius: 10px;
+    -fx-background-color: #1a1a52;
+    -fx-cursor: hand;
+}
+
+#SearchDealerButton:hover{
+    -fx-background-color: #2a545e;
+}
+
+#SearchDealerButton:pressed{
+    -fx-background-color: #719aa6;
+}
+
+.UpperSelectedDealerTable{
+    -fx-background-color: linear-gradient(#decaca, #c4c0c0);
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+}
+
+.UpperSelectedDealerTable:even{
+    -fx-background-color: transparent;
+    -fx-padding: 5px;
+    -fx-font-weight: bold;
+}
+
+.UpperSelectedDealerTable:odd{
+    -fx-background-color: linear-gradient(#f8f2f2, #f5eaea);
+    -fx-padding: 5px;
+    -fx-font-weight: bold;
+}
+
+.LowerSelectedDealerHeading{
+    -fx-background-color: linear-gradient(#decaca, #c4c0c0);
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+}
+
+.LowerSelectedDealerHeading:odd{
+    -fx-background-color: linear-gradient(#f8efef, #f5eaea);
+    -fx-selection-bar: transparent;
+}
+
+.LowerSelectedDealerHeading:pressed{
+    -fx-background-color: linear-gradient(#f6ecec, #e7dfdf);
+    -fx-text-fill: black;
+
+}
+
+.LowerSelectedDealerHeading:even{
+    -fx-background-color: transparent;
+    -fx-selection-bar: transparent;
+}
+
+
+#MinimiseButton{
+    -fx-background-color: #ffffff;
+}
+
+#MinimiseButton:hover{
+    -fx-background-color: #83d5bd;
+}
+
+#MinimiseButton:pressed{
+    -fx-background-color:  #85c0ad;
+}
+
+#close{
+    -fx-background-color: #ffffff;
+}
+
+#close:hover{
+    -fx-background-color: #83d5bd;
+}
+
+
+#close:pressed {
+    -fx-background-color: #85c0ad;
+}
+
+#ItemViewTable{
+    -fx-background-color: white;
+}
+
+#absoluteImage{
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+}
+
+.logButton{
+    -fx-background-color: #2b3e5b;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.logButton:hover{
+    -fx-background-color: linear-gradient(#4ca1af  , #3f737c);
+}
+
+.logButton:pressed{
+    -fx-background-color: linear-gradient(#02aab0 , #00cdac);
+}
+
+.logField{
+    -fx-background-radius: 5px;
+    -fx-border-radius: 6px;
+}
+
+#LoginMinimise{
+    -fx-background-color: #ffffff;
+    -fx-cursor: hand;
+}
+
+#LoginMinimise:hover{
+    -fx-background-color: #83d5bd;
+}
+
+#LoginMinimise:pressed{
+    -fx-background-color: #85c0ad;
+}
+
+#LoginClose{
+    -fx-background-color: #ffffff;
+    -fx-cursor: hand;
+}
+
+#LoginClose:hover{
+    -fx-background-color: #83d5bd;
+}
+
+#LoginClose:pressed{
+    -fx-background-color: #85c0ad;
+}
+
+#SignUpMassage{
+ -fx-text-alignment: center;
+ -fx-font-size: 12px;
+ -fx-font-weight: bold;
+    -fx-text-fill: #c00000;
+}
+
+#welcomeHeader{
+    -fx-background-color: #02224d;
+}
+
+#startButton{
+    -fx-background-radius: 5px;
+    -fx-background-color: #02224d;
+    -fx-text-fill: white;
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+#startButton:hover{
+    -fx-background-color: linear-gradient(#4ca1af  , #3f737c);
+}
+
+#startButton:pressed{
+    -fx-background-color: linear-gradient(#02aab0 , #00cdac);
+}

@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="MainStackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#StackPaneDragDetected" onMousePressed="#StackPanePressed" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.SwitchSceneManager">
+   <AnchorPane prefHeight="546.0" prefWidth="1028.0">
+      <BorderPane layoutX="-14.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="46.0" prefWidth="1118.0" BorderPane.alignment="CENTER">
+               <AnchorPane fx:id="InventoryLabel" layoutX="14.0" prefHeight="46.0" prefWidth="1113.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                     <Label layoutX="24.0" layoutY="6.0" text="OneNet Cafe Inventory System" textFill="WHITE">
+                        <font>
+                           <Font name="Leelawadee UI Bold" size="24.0" />
+                        </font>
+                     </Label>
+                     <Button fx:id="close" layoutX="1035.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#ExitTheProgram" prefHeight="25.0" prefWidth="30.0" AnchorPane.topAnchor="7.0">
+                        <graphic>
+                           <ImageView fx:id="closing" fitHeight="22.0" fitWidth="25.0" onDragDetected="#ExitTheProgram" onMouseClicked="#ExitTheProgram" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@images/maximize4.png" />
+                              </image>
+                           </ImageView>
+                        </graphic></Button>
+                     <Button fx:id="MinimiseButton" layoutX="987.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#MinimiseThePane" prefHeight="30.0" prefWidth="34.0">
+                        <graphic>
+                           <ImageView fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@images/minimize-icon-3.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>
+                  </children>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </AnchorPane>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="554.0" prefWidth="242.0" BorderPane.alignment="CENTER">
+               <AnchorPane fx:id="SidePane" layoutX="35.0" layoutY="8.0" prefHeight="538.0" prefWidth="221.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="8.0">
+                  <children>
+                     <ImageView fitHeight="94.0" fitWidth="93.0" layoutX="58.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/Admin.png" />
+                        </image>
+                     </ImageView>
+                     <Label fx:id="GreetingMassage" layoutX="66.0" layoutY="125.0" prefHeight="47.0" prefWidth="86.0" text="Hello">
+                        <font>
+                           <Font name="System Bold" size="32.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="UserName" layoutX="4.0" layoutY="161.0" prefHeight="50.0" prefWidth="211.0" text="      Admin" textAlignment="CENTER">
+                        <font>
+                           <Font name="System Bold" size="33.0" />
+                        </font>
+                     </Label>
+                     <Line endX="107.39999389648438" endY="3.0517578125E-5" layoutX="110.0" layoutY="213.0" startX="-100.0" />
+                     <AnchorPane fx:id="logArea" layoutX="63.0" layoutY="404.0" onMouseClicked="#ExitTheProgram" prefHeight="90.0" prefWidth="92.0">
+                        <children>
+                           <ImageView fx:id="exit" fitHeight="55.0" fitWidth="47.0" layoutX="23.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@images/logout.png" />
+                              </image>
+                           </ImageView>
+                           <Label layoutX="25.0" layoutY="73.0" text="Exit">
+                              <font>
+                                 <Font name="System Bold" size="26.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </AnchorPane>
+                     <Button fx:id="LogOutButton" layoutX="19.0" layoutY="242.0" mnemonicParsing="false" onMouseClicked="#LogOut" prefHeight="43.0" prefWidth="176.0" styleClass="Menu" text="Log Out" textFill="WHITE" />
+                  </children>
+               </AnchorPane>
+               <AnchorPane fx:id="ItemSidePane" layoutX="40.0" layoutY="11.0" onMouseClicked="#ExitTheProgram" prefHeight="534.0" prefWidth="214.0" visible="false">
+                  <children>
+                     <ImageView fitHeight="106.0" fitWidth="127.0" layoutX="54.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/Admin.png" />
+                        </image>
+                     </ImageView>
+                     <Line endX="83.79997253417969" endY="1.52587890625E-5" layoutX="109.0" layoutY="141.0" opacity="0.16" startX="-87.40000915527344" startY="1.52587890625E-5" />
+                     <Button fx:id="ViewHomeButton" layoutX="26.0" layoutY="166.0" mnemonicParsing="false" onAction="#GoToHomePage" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="Home" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <Button layoutX="28.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#GoToAddItems" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="Add Items" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <Button fx:id="ViewDeleteButton" layoutX="28.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#GoToDeleteItems" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="Delete Items" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <Button fx:id="ViewUpdateButton" layoutX="28.0" layoutY="371.0" mnemonicParsing="false" onMouseClicked="#GoToUpdateItems" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="Update Items" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <AnchorPane fx:id="ViewExitButton" layoutX="46.0" layoutY="424.0" prefHeight="96.0" prefWidth="121.0" styleClass="ExitButtonStyler">
+                        <children>
+                           <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="32.0" layoutY="20.0" onDragDetected="#ExitTheProgram" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@images/logout.png" />
+                              </image>
+                           </ImageView>
+                        </children>
+                     </AnchorPane>
+                  </children>
+               </AnchorPane>
+               <AnchorPane fx:id="ItemDeleteSidePane1" layoutX="40.0" layoutY="12.0" prefHeight="531.0" prefWidth="214.0" visible="false">
+                  <children>
+                     <ImageView fitHeight="106.0" fitWidth="127.0" layoutX="54.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/Admin.png" />
+                        </image>
+                     </ImageView>
+                     <Line endX="83.79997253417969" endY="1.52587890625E-5" layoutX="109.0" layoutY="141.0" opacity="0.16" startX="-87.40000915527344" startY="1.52587890625E-5" />
+                     <Button fx:id="DeleteHomeButton" layoutX="26.0" layoutY="166.0" mnemonicParsing="false" onAction="#GoToHomePage" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="Home" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <Button fx:id="DeleteAddButton" layoutX="28.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#GoToAddItems" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="Add Items" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <Button fx:id="DeleteUpdateButton" layoutX="28.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#GoToUpdateItems" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="Update Items" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <Button fx:id="DeleteViewButton" layoutX="28.0" layoutY="371.0" mnemonicParsing="false" onMouseClicked="#GoToViewItems" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="View Items" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <AnchorPane fx:id="DeleteExitButton" layoutX="46.0" layoutY="421.0" onMouseClicked="#ExitTheProgram" prefHeight="96.0" prefWidth="121.0" styleClass="ExitButtonStyler">
+                        <children>
+                           <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@images/logout.png" />
+                              </image>
+                           </ImageView>
+                        </children>
+                     </AnchorPane>
+                  </children>
+               </AnchorPane>
+               <AnchorPane fx:id="ItemUpdateSidePane" layoutX="40.0" layoutY="10.0" prefHeight="536.0" prefWidth="214.0" visible="false">
+                  <children>
+                     <ImageView fitHeight="106.0" fitWidth="127.0" layoutX="54.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/Admin.png" />
+                        </image>
+                     </ImageView>
+                     <Line endX="83.79997253417969" endY="1.52587890625E-5" layoutX="109.0" layoutY="141.0" opacity="0.16" startX="-87.40000915527344" startY="1.52587890625E-5" />
+                     <Button fx:id="UpdateHomeButton" layoutX="26.0" layoutY="166.0" mnemonicParsing="false" onAction="#GoToHomePage" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="Home" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <Button fx:id="UpdateAddButton" layoutX="28.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#GoToAddItems" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="Add Items" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <Button fx:id="UpdateDeleteButton" layoutX="28.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#GoToDeleteItems" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="Delete Items" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <Button fx:id="UpdateViewButton" layoutX="28.0" layoutY="371.0" mnemonicParsing="false" onMouseClicked="#GoToViewItems" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="View Items" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <AnchorPane fx:id="UpdateExitButton" layoutX="38.0" layoutY="426.0" onMouseClicked="#ExitTheProgram" prefHeight="96.0" prefWidth="121.0" styleClass="ExitButtonStyler">
+                        <children>
+                           <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@images/logout.png" />
+                              </image>
+                           </ImageView>
+                        </children>
+                     </AnchorPane>
+                  </children>
+               </AnchorPane>
+               <AnchorPane fx:id="ItemInputSidePane" layoutX="50.0" layoutY="7.0" prefHeight="538.0" prefWidth="215.0" visible="false" AnchorPane.leftAnchor="35.0">
+                  <children>
+                     <ImageView fitHeight="106.0" fitWidth="127.0" layoutX="54.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/Admin.png" />
+                        </image>
+                     </ImageView>
+                     <Line endX="83.79997253417969" endY="1.52587890625E-5" layoutX="109.0" layoutY="141.0" opacity="0.16" startX="-87.40000915527344" startY="1.52587890625E-5" />
+                     <Button fx:id="AddHomeButton" layoutX="26.0" layoutY="166.0" mnemonicParsing="false" onAction="#GoToHomePage" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="Home" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <Button fx:id="AddUpdateButton" layoutX="28.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#GoToUpdateItems" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="Update Items" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <Button fx:id="AddDeleteButton" layoutX="28.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#GoToDeleteItems" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="Delete Items" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <Button fx:id="AddViewButton" layoutX="28.0" layoutY="371.0" mnemonicParsing="false" onMouseClicked="#GoToViewItems" prefHeight="39.0" prefWidth="162.0" styleClass="Menu" text="View Items" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                     <AnchorPane layoutX="-30.0" layoutY="301.0" prefHeight="91.0" prefWidth="102.0" />
+                     <AnchorPane fx:id="AddExitButtton" layoutX="41.0" layoutY="428.0" onMouseClicked="#ExitTheProgram" prefHeight="96.0" prefWidth="121.0" styleClass="ExitButtonStyler">
+                        <children>
+                           <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@images/logout.png" />
+                              </image>
+                           </ImageView>
+                        </children>
+                     </AnchorPane>
+                  </children>
+               </AnchorPane>
+               <AnchorPane fx:id="GenerateRandomDealerSidePane" layoutX="44.0" layoutY="9.0" prefHeight="538.0" prefWidth="215.0" visible="false">
+                  <children>
+                     <ImageView fitHeight="106.0" fitWidth="127.0" layoutX="54.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/Admin.png" />
+                        </image>
+                     </ImageView>
+                     <Line endX="83.79997253417969" endY="1.52587890625E-5" layoutX="109.0" layoutY="141.0" opacity="0.16" startX="-87.40000915527344" startY="1.52587890625E-5" />
+                     <Button fx:id="GenerateHomeButton" layoutX="15.0" layoutY="166.0" mnemonicParsing="false" onAction="#GoToHomePage" prefHeight="43.0" prefWidth="181.0" styleClass="Menu" text="Home" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="19.0" />
+                     <Button fx:id="GenerateSelectedDealersButton" layoutX="19.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#GoToViewDealerDetails" prefHeight="43.0" prefWidth="177.0" styleClass="Menu" text="Seleted Dealers" textFill="WHITE" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0" />
+                     <Button fx:id="GenerateSelectedDealerButton" layoutX="17.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#GoToSelectedDealer" prefHeight="43.0" prefWidth="179.0" styleClass="Menu" text="Selected Dealer" textFill="WHITE" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="19.0" />
+                     <AnchorPane fx:id="GenerateExitButton" layoutX="41.0" layoutY="428.0" onMouseClicked="#ExitTheProgram" prefHeight="96.0" prefWidth="121.0" styleClass="ExitButtonStyler">
+                        <children>
+                           <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@images/logout.png" />
+                              </image>
+                           </ImageView>
+                        </children>
+                     </AnchorPane>
+                  </children>
+               </AnchorPane>
+               <AnchorPane fx:id="SeeSelectedDealersSidePane" layoutX="38.0" layoutY="6.0" prefHeight="542.0" prefWidth="215.0" visible="false">
+                  <children>
+                     <AnchorPane prefHeight="538.0" prefWidth="215.0">
+                        <children>
+                           <ImageView fitHeight="106.0" fitWidth="127.0" layoutX="54.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@images/Admin.png" />
+                              </image>
+                           </ImageView>
+                           <Line endX="83.79997253417969" endY="1.52587890625E-5" layoutX="109.0" layoutY="141.0" opacity="0.16" startX="-87.40000915527344" startY="1.52587890625E-5" />
+                           <Button fx:id="ViewDealersHomeButton" layoutX="12.0" layoutY="166.0" mnemonicParsing="false" onAction="#GoToHomePage" prefHeight="43.0" prefWidth="195.0" styleClass="Menu" text="Home" textFill="WHITE" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="8.0" />
+                           <Button fx:id="ViewDealersGenerateButton" layoutX="13.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#GoTOGenerateDealers" prefHeight="43.0" prefWidth="193.0" styleClass="Menu" text="Generate Dealers" textFill="WHITE" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="9.0" />
+                           <Button fx:id="ViewDealersSelectedDealerButton" layoutX="16.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#GoToSelectedDealer" prefHeight="43.0" prefWidth="191.0" styleClass="Menu" text="Selected Dealer" textFill="WHITE" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="8.0" />
+                           <AnchorPane layoutX="-30.0" layoutY="301.0" prefHeight="91.0" prefWidth="102.0" />
+                           <AnchorPane fx:id="ViewDealersExitButton" layoutX="41.0" layoutY="428.0" onMouseClicked="#ExitTheProgram" prefHeight="96.0" prefWidth="121.0" styleClass="ExitButtonStyler">
+                              <children>
+                                 <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@images/logout.png" />
+                                    </image>
+                                 </ImageView>
+                              </children>
+                           </AnchorPane>
+                        </children>
+                     </AnchorPane>
+                  </children>
+               </AnchorPane>
+               <AnchorPane fx:id="SelectedIndividualDealerSidePane" layoutX="48.0" layoutY="16.0" prefHeight="524.0" prefWidth="215.0" visible="false" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="10.0">
+                  <children>
+                     <AnchorPane prefHeight="531.0" prefWidth="215.0">
+                        <children>
+                           <ImageView fitHeight="106.0" fitWidth="127.0" layoutX="54.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="54.0">
+                              <image>
+                                 <Image url="@images/Admin.png" />
+                              </image>
+                           </ImageView>
+                           <Line endX="83.79997253417969" endY="1.52587890625E-5" layoutX="109.0" layoutY="141.0" opacity="0.16" startX="-87.40000915527344" startY="1.52587890625E-5" />
+                           <Button fx:id="SelectedDealerHomeButton" layoutX="12.0" layoutY="166.0" mnemonicParsing="false" onAction="#GoToHomePage" prefHeight="43.0" prefWidth="195.0" styleClass="Menu" text="Home" textFill="WHITE" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="8.0" />
+                           <Button fx:id="SelectedDealerGenerateButton" layoutX="13.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#GoTOGenerateDealers" prefHeight="43.0" prefWidth="193.0" styleClass="Menu" text="Generate Dealers" textFill="WHITE" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="9.0" />
+                           <Button fx:id="SelectedDealerViewSelectedDealersButton" layoutX="16.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#GoToViewDealerDetails" prefHeight="43.0" prefWidth="191.0" styleClass="Menu" text="Selected Dealers" textFill="WHITE" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="8.0" />
+                           <AnchorPane layoutX="-30.0" layoutY="301.0" prefHeight="91.0" prefWidth="102.0" />
+                           <AnchorPane fx:id="SelectedDealerExitButton" layoutX="41.0" layoutY="428.0" onMouseClicked="#ExitTheProgram" prefHeight="96.0" prefWidth="121.0" styleClass="ExitButtonStyler">
+                              <children>
+                                 <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@images/logout.png" />
+                                    </image>
+                                 </ImageView>
+                              </children>
+                           </AnchorPane>
+                        </children>
+                     </AnchorPane>
+                  </children>
+               </AnchorPane>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="554.0" prefWidth="884.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="mainPane" layoutX="7.0" layoutY="5.0" prefHeight="544.0" prefWidth="856.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="5.0">
+                     <children>
+                        <AnchorPane fx:id="BackImage" layoutX="32.0" layoutY="23.0" prefHeight="99.0" prefWidth="807.0">
+                           <children>
+                              <Label layoutX="189.0" layoutY="24.0" prefHeight="51.0" prefWidth="482.0" text="Welcome to One Net Cafe ">
+                                 <font>
+                                    <Font name="System Bold" size="38.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="ViewItemTile" layoutX="32.0" layoutY="350.0" onMouseClicked="#GoToViewItems" prefHeight="150.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <Label layoutX="25.0" layoutY="97.0" text="View Items">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="74.0" fitWidth="68.0" layoutX="58.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/ViewItems.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                        <AnchorPane fx:id="GenerateDealer" layoutX="239.0" layoutY="350.0" onMouseClicked="#GoTOGenerateDealers" prefHeight="150.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <Label layoutX="11.0" layoutY="82.0" prefHeight="35.0" prefWidth="163.0" text="     Generate" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="51.0" layoutY="110.0" text="Dealers">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="66.0" fitWidth="75.0" layoutX="62.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/generatedealers.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="ViewDealerDetail" layoutX="442.0" layoutY="350.0" onMouseClicked="#GoToViewDealerDetails" prefHeight="150.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <Label layoutX="30.0" layoutY="84.0" text="View Dealer ">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="54.0" layoutY="111.0" text="Details">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="67.0" fitWidth="66.0" layoutX="63.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/viewdealers.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="DeleteItemTile" layoutX="239.0" layoutY="150.0" onMouseClicked="#GoToDeleteItems" prefHeight="150.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <Label layoutX="15.0" layoutY="97.0" text="Delete Items">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="88.0" fitWidth="74.0" layoutX="54.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/deleteItems.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                        <AnchorPane fx:id="ViewSelectedDealer" layoutX="652.0" layoutY="347.0" onMouseClicked="#GoToSelectedDealer" prefHeight="155.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <ImageView fitHeight="64.0" fitWidth="71.0" layoutX="57.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/selectedDealer.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="17.0" layoutY="90.0" text="View Selected ">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="56.0" layoutY="116.0" text="Dealer">
+                                 <font>
+                                    <Font name="System Bold" size="23.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="UpdateItemTile" layoutX="442.0" layoutY="150.0" onMouseClicked="#GoToUpdateItems" prefHeight="150.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <Label layoutX="10.0" layoutY="97.0" text="Update Items">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="77.0" fitWidth="89.0" layoutX="54.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/updateItems.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                        <AnchorPane fx:id="SaveItemTile" layoutX="652.0" layoutY="150.0" onMouseClicked="#GoToSaveItems" prefHeight="150.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <Label layoutX="27.0" layoutY="97.0" text="Save Items">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="82.0" fitWidth="78.0" layoutX="54.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/saveItems.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                        <AnchorPane fx:id="AddItemTile" layoutX="32.0" layoutY="150.0" onMouseClicked="#GoToAddItems" prefHeight="150.0" prefWidth="185.0" styleClass="topic">
+                           <children>
+                              <Label layoutX="30.0" layoutY="97.0" text="Add Items">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="71.0" fitWidth="134.0" layoutX="57.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/addItems.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="ItemViewPane" layoutX="4.0" layoutY="7.0" prefHeight="540.0" prefWidth="855.0" visible="false">
+                     <children>
+                        <AnchorPane fx:id="TotalPricePane" layoutX="372.0" layoutY="402.0" prefHeight="115.0" prefWidth="475.0" AnchorPane.topAnchor="410.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="34.0" prefHeight="50.0" prefWidth="187.0" text="Total Price : " textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ViewItemTotalPrice" layoutX="193.0" layoutY="25.0" prefHeight="70.0" prefWidth="271.0" text="Rs.0.00" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="TotalItems" layoutX="14.0" layoutY="410.0" prefHeight="115.0" prefWidth="338.0" AnchorPane.topAnchor="410.0">
+                           <children>
+                              <Label layoutX="15.0" layoutY="35.0" prefHeight="50.0" prefWidth="210.0" text="Total Items : " textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ViewItemTotalCount" layoutX="214.0" layoutY="13.0" prefHeight="94.0" prefWidth="117.0" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="fullTableView" layoutX="10.0" layoutY="8.0" prefHeight="390.0" prefWidth="838.0">
+                           <children>
+                              <TableView fx:id="ItemViewTable" layoutX="12.0" layoutY="97.0" prefHeight="285.0" prefWidth="814.0">
+                                <columns>
+                                  <TableColumn fx:id="ItemCode" prefWidth="88.80001449584961" styleClass="ViewTableHeading" text="Item Code" />
+                                  <TableColumn fx:id="ItemViewName" prefWidth="97.60003662109375" styleClass="ViewTableHeading" text="Item Name" />
+                                    <TableColumn fx:id="ItemViewBrand" prefWidth="113.60002136230469" styleClass="ViewTableHeading" text="Item Brand" />
+                                    <TableColumn fx:id="ItemViewPrice" prefWidth="100.0" styleClass="ViewTableHeading" text="Item Price" />
+                                    <TableColumn fx:id="ItemViewQuantity" prefWidth="100.0" styleClass="ViewTableHeading" text="Item Quantity" />
+                                    <TableColumn fx:id="ItemViewCategory" prefWidth="90.4000244140625" styleClass="ViewTableHeading" text="Category" />
+                                    <TableColumn fx:id="ItemViewPurchasedDate" prefWidth="109.5999755859375" styleClass="ViewTableHeading" text="Purchased Date" />
+                                    <TableColumn fx:id="ItemViewImage" prefWidth="119.199951171875" styleClass="ViewTableHeading" text="Item Image" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="ViewItemSearchBar" layoutX="14.0" layoutY="48.0" prefHeight="34.0" prefWidth="299.0" promptText=" Search here for saved Items" style="-fx-background-radius: 10px;">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="ViewImageFilterButton" layoutX="250.0" layoutY="48.0" mnemonicParsing="false" onMouseClicked="#ViewItemByItemCode" prefHeight="33.0" prefWidth="62.0">
+                                 <graphic>
+                                    <ImageView fx:id="img2" fitHeight="23.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" rotate="121.3">
+                                       <image>
+                                          <Image url="@images/magni.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <AnchorPane fx:id="ViewItemsHeadingPane" layoutX="2.0" prefHeight="21.0" prefWidth="838.0" AnchorPane.bottomAnchor="344.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="-1.0">
+                                 <children>
+                                    <Label fx:id="TextPane" layoutX="22.0" layoutY="3.0" prefHeight="36.0" prefWidth="310.0" text="View Your Saved Items Here">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane fx:id="HeadingCover" layoutX="1.0" layoutY="32.0" prefHeight="7.0" prefWidth="834.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="39.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="AddingWhitePane" layoutX="22.0" layoutY="13.0" prefHeight="528.0" prefWidth="838.0" visible="false">
+                     <children>
+                        <AnchorPane fx:id="InnerPane" layoutX="11.0" layoutY="16.0" prefHeight="494.0" prefWidth="810.0" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="16.0">
+                           <children>
+                              <TextField fx:id="ItemCodeInput" layoutX="34.0" layoutY="90.0" onKeyReleased="#TypeTextChange" prefHeight="20.0" prefWidth="330.0" promptText="Eg : 001" styleClass="AddInputTextFields" AnchorPane.leftAnchor="34.0">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="17.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TextField>
+                              <TextField fx:id="ItemNameInput" layoutX="31.0" layoutY="174.0" onKeyReleased="#TypeTextChange" prefHeight="20.0" prefWidth="330.0" promptText="Eg: Speaker" styleClass="AddInputTextFields" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="172.0">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="ItemPriceInput" layoutX="31.0" layoutY="346.0" onKeyReleased="#TypeTextChange" prefHeight="20.0" prefWidth="330.0" promptText="Eg: 21966.00" styleClass="AddInputTextFields" AnchorPane.leftAnchor="31.0">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="ItemQuantityInput" layoutX="33.0" layoutY="435.0" onKeyReleased="#TypeTextChange" prefHeight="20.0" prefWidth="325.0" promptText="Eg: 10" styleClass="AddInputTextFields" AnchorPane.leftAnchor="33.0">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="ItemBrandInput" layoutX="31.0" layoutY="256.0" onKeyReleased="#TypeTextChange" prefHeight="20.0" prefWidth="330.0" promptText="Eg: Samsung" styleClass="AddInputTextFields" AnchorPane.leftAnchor="31.0">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <AnchorPane fx:id="AddItemsTitlePaneBackground" layoutX="-4.0" layoutY="-8.0" prefHeight="66.0" prefWidth="813.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="-8.0">
+                                 <children>
+                                    <Label fx:id="AddItemDetailsHereMassage" layoutX="14.0" prefHeight="41.0" prefWidth="292.0" text=" Add Item details Here">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="AddItemsTitlePane2" layoutY="45.0" prefHeight="15.0" prefWidth="816.0" />
+                              <Label layoutX="33.0" layoutY="59.0" prefHeight="25.0" prefWidth="328.0" styleClass="InputTag" text="Item Code" AnchorPane.leftAnchor="33.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="30.0" top="6.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="139.0" prefHeight="25.0" prefWidth="328.0" styleClass="InputTag" text="Item Name" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="139.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="30.0" top="6.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="32.0" layoutY="314.0" prefHeight="25.0" prefWidth="328.0" styleClass="InputTag" text="Item Price" AnchorPane.leftAnchor="32.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="30.0" top="6.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="399.0" prefHeight="25.0" prefWidth="328.0" styleClass="InputTag" text="Item Quantity" AnchorPane.leftAnchor="33.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="30.0" top="6.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="32.0" layoutY="227.0" prefHeight="25.0" prefWidth="328.0" styleClass="InputTag" text="Item Brand" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="227.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="30.0" top="6.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="434.0" layoutY="139.0" prefHeight="25.0" prefWidth="328.0" styleClass="InputTag" text="Purchased Date" AnchorPane.leftAnchor="434.0" AnchorPane.topAnchor="142.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="DateInput" layoutX="434.0" layoutY="182.0" prefHeight="34.0" prefWidth="330.0" promptText="Pick a Date" AnchorPane.leftAnchor="434.0" AnchorPane.topAnchor="176.0" />
+                              <Label layoutX="434.0" layoutY="59.0" prefHeight="25.0" prefWidth="328.0" styleClass="InputTag" text="Item Category" AnchorPane.leftAnchor="434.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="30.0" top="6.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="ItemCategoryInput" layoutX="433.0" layoutY="89.0" onKeyReleased="#TypeTextChange" prefHeight="20.0" prefWidth="330.0" promptText="Eg: Speakers" styleClass="AddInputTextFields" AnchorPane.leftAnchor="433.0">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="AddItemsButton" layoutX="435.0" layoutY="444.0" mnemonicParsing="false" onMouseClicked="#AddDetails" prefHeight="30.0" prefWidth="130.0" styleClass="InputButton" text="Add" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="ClearItemsButton" layoutX="634.0" layoutY="444.0" mnemonicParsing="false" onMouseClicked="#ClearAllFields" prefHeight="30.0" prefWidth="130.0" styleClass="InputButton" text="Clear" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="415.0" layoutY="240.0" prefHeight="25.0" prefWidth="328.0" styleClass="InputTag" text="Item Image" AnchorPane.leftAnchor="435.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="30.0" top="6.0" />
+                                 </padding>
+                              </Label>
+                              <AnchorPane fx:id="ImageInputPane" layoutX="435.0" layoutY="273.0" prefHeight="98.0" prefWidth="326.0">
+                                 <children>
+                                    <ImageView fx:id="ItemImageInput" fitHeight="140.0" fitWidth="315.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/white.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="ImageInputButton" layoutX="-1.0" layoutY="130.0" mnemonicParsing="false" onAction="#OpenImageHandler" prefHeight="26.0" prefWidth="326.0" text="Import" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <Label fx:id="massageInputItemCode" layoutX="42.0" layoutY="123.0" prefHeight="18.0" prefWidth="266.0" text="                    " textFill="#a80d0d" AnchorPane.leftAnchor="42.0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <Label fx:id="massageInputItemName" layoutX="42.0" layoutY="208.0" prefHeight="18.0" prefWidth="266.0" textFill="#a80d0d" AnchorPane.leftAnchor="42.0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <Label fx:id="massageInputItemBrand" layoutX="42.0" layoutY="290.0" prefHeight="18.0" prefWidth="266.0" textFill="#a80d0d" AnchorPane.leftAnchor="42.0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <Label fx:id="massageInputItemPrice" layoutX="42.0" layoutY="380.0" prefHeight="18.0" prefWidth="266.0" textFill="#a80d0d">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <Label fx:id="massageInputItemCode1" layoutX="42.0" layoutY="471.0" prefHeight="18.0" prefWidth="266.0" />
+                              <Label fx:id="massageInputItemCategory" layoutX="435.0" layoutY="123.0" prefHeight="18.0" prefWidth="266.0" textFill="#a80d0d">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <Label fx:id="massageInputItemDate" layoutX="435.0" layoutY="217.0" prefHeight="18.0" prefWidth="266.0" textFill="#a80d0d">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <Label fx:id="massageInputItemQuantity" layoutX="42.0" layoutY="471.0" prefHeight="18.0" prefWidth="266.0" textFill="#a80d0d">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="ItemUpdatePane" layoutX="22.0" layoutY="17.0" prefHeight="532.0" prefWidth="838.0" visible="false" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="17.0">
+                     <children>
+                        <AnchorPane fx:id="ItemUpdateTablePane" layoutX="9.0" layoutY="10.0" prefHeight="264.0" prefWidth="819.0">
+                           <children>
+                              <TableView fx:id="UpdateViewTable" layoutX="14.0" layoutY="87.0" onMouseClicked="#UpdateRowSelection" prefHeight="162.0" prefWidth="787.0">
+                                <columns>
+                                  <TableColumn fx:id="UpdateItemCode" prefWidth="95.0" styleClass="UpdateTableHeading" text="Item Code" />
+                                  <TableColumn fx:id="UpdateItemName" prefWidth="95.0" styleClass="UpdateTableHeading" text="Item Name" />
+                                    <TableColumn fx:id="UpdateItemBrand" prefWidth="95.0" styleClass="UpdateTableHeading" text="Item Brand" />
+                                    <TableColumn fx:id="UpdateItemPrice" prefWidth="95.0" styleClass="UpdateTableHeading" text="Item Price" />
+                                    <TableColumn fx:id="UpdateItemQuantity" prefWidth="95.0" styleClass="UpdateTableHeading" text="Item Quantity" />
+                                    <TableColumn fx:id="UpdateItemCategory" prefWidth="95.0" styleClass="UpdateTableHeading" text="Item Category" />
+                                    <TableColumn fx:id="UpdateItemPurchasedDate" prefWidth="95.0" styleClass="UpdateTableHeading" text="Purchased Date" />
+                                    <TableColumn fx:id="UpdateItemImage" prefWidth="119.99981689453125" styleClass="UpdateTableHeading" text="Item Image" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="UpdateSearchBar" layoutX="23.0" layoutY="42.0" prefHeight="32.0" prefWidth="260.0" promptText="Search By ItemCode" AnchorPane.topAnchor="48.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="UpdateSearchButton" layoutX="229.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#SearchUpdateItems" prefHeight="32.0" prefWidth="54.0" AnchorPane.topAnchor="48.0">
+                                 <graphic>
+                                    <ImageView fitHeight="21.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/1200px-Magnifying_glass_icon.svg.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <AnchorPane fx:id="UpdateDetailsMainHeading" layoutX="-2.0" layoutY="-1.0" prefHeight="44.0" prefWidth="820.0" AnchorPane.leftAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="21.0" layoutY="8.0" prefHeight="28.0" prefWidth="357.0" text="Search or Select to Update Details">
+                                       <font>
+                                          <Font name="Verdana Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutY="35.0" prefHeight="9.0" prefWidth="820.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="UpdateFieldPane" layoutX="9.0" layoutY="283.0" prefHeight="239.0" prefWidth="789.0" AnchorPane.topAnchor="283.0">
+                           <children>
+                              <TextField fx:id="UpdateItemNameInput" layoutX="104.0" layoutY="130.0" onKeyReleased="#textUpdateErrorDisplay" prefHeight="26.0" prefWidth="155.0" promptText="Eg:  Speaker" styleClass="UpdateBox" AnchorPane.leftAnchor="103.0" AnchorPane.topAnchor="115.0" />
+                              <TextField fx:id="UpdateItemCodeInput" layoutX="103.0" layoutY="71.0" onKeyReleased="#textUpdateErrorDisplay" prefHeight="26.0" prefWidth="157.0" promptText="Eg:  001" styleClass="UpdateBox" AnchorPane.leftAnchor="103.0" AnchorPane.topAnchor="50.0" />
+                              <TextField fx:id="UpdateItemQuantityInput" layoutX="357.0" layoutY="131.0" onKeyReleased="#textUpdateErrorDisplay" prefWidth="180.0" promptText="Eg:  10" styleClass="UpdateBox" AnchorPane.leftAnchor="357.0" AnchorPane.topAnchor="115.0" />
+                              <TextField fx:id="UpdateItemPriceInput" layoutX="357.0" layoutY="71.0" onKeyReleased="#textUpdateErrorDisplay" prefWidth="180.0" promptText="Eg:  21966.00" styleClass="UpdateBox" AnchorPane.leftAnchor="357.0" AnchorPane.topAnchor="50.0" />
+                              <TextField fx:id="UpdateItemBrandInput" layoutX="108.0" layoutY="188.0" onKeyReleased="#textUpdateErrorDisplay" prefHeight="26.0" prefWidth="154.0" promptText="Eg:  Samsung" styleClass="UpdateBox" AnchorPane.leftAnchor="103.0" AnchorPane.topAnchor="180.0" />
+                              <TextField fx:id="UpdateItemCategoryInput" layoutX="357.0" layoutY="187.0" onKeyReleased="#textUpdateErrorDisplay" prefWidth="180.0" promptText="Eg: Speakers" styleClass="UpdateBox" AnchorPane.leftAnchor="357.0" AnchorPane.topAnchor="180.0" />
+                              <Label layoutX="14.0" layoutY="74.0" prefHeight="20.0" prefWidth="98.0" text="Item Code :" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="50.0">
+                                 <font>
+                                    <Font name="Wingdings 2" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="12.0" layoutY="134.0" prefHeight="20.0" prefWidth="101.0" text="Item Name : " AnchorPane.topAnchor="115.0">
+                                 <font>
+                                    <Font name="Wingdings 2" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="15.0" layoutY="191.0" text="Item Brand :" AnchorPane.topAnchor="180.0">
+                                 <font>
+                                    <Font name="Wingdings 2" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="274.0" layoutY="74.0" prefHeight="20.0" prefWidth="90.0" text="Item Price :" AnchorPane.topAnchor="50.0">
+                                 <font>
+                                    <Font name="Wingdings 2" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="274.0" layoutY="133.0" prefHeight="20.0" prefWidth="115.0" text="Quantity :" AnchorPane.topAnchor="115.0">
+                                 <font>
+                                    <Font name="Wingdings 2" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="274.0" layoutY="191.0" prefHeight="20.0" prefWidth="115.0" text="Category :" AnchorPane.topAnchor="180.0">
+                                 <font>
+                                    <Font name="Wingdings 2" size="15.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="UpdatePurchasedDateInput" layoutX="631.0" layoutY="60.0" prefHeight="30.0" prefWidth="181.0" promptText="Eg: 2023/ 06/25" styleClass="UpdateBox" AnchorPane.topAnchor="50.0" />
+                              <Label layoutX="552.0" layoutY="74.0" prefHeight="20.0" prefWidth="90.0" text="Purchased :" AnchorPane.topAnchor="50.0">
+                                 <font>
+                                    <Font name="Wingdings 2" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="565.0" layoutY="67.0" text="Date" AnchorPane.topAnchor="67.0">
+                                 <font>
+                                    <Font name="Wingdings 2" size="15.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane fx:id="ImageUpdatePane" layoutX="641.0" layoutY="109.0" prefHeight="85.0" prefWidth="98.0">
+                                 <children>
+                                    <ImageView fx:id="UpdateImageInput" fitHeight="79.0" fitWidth="93.0" layoutX="2.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Button fx:id="ImageUpdateImportButton" layoutY="58.0" mnemonicParsing="false" onAction="#OpenImageHandler" prefHeight="26.0" prefWidth="97.0" text="Import" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="573.0" layoutY="115.0" prefHeight="20.0" prefWidth="115.0" text="Image :">
+                                 <font>
+                                    <Font name="Wingdings 2" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="UpdateButton" layoutX="633.0" layoutY="203.0" mnemonicParsing="false" onAction="#UpdateItems" prefHeight="30.0" prefWidth="113.0" text="Update" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <AnchorPane fx:id="UpdateDetailMiddlePane" prefHeight="44.0" prefWidth="818.0">
+                                 <children>
+                                    <Label layoutX="21.0" layoutY="8.0" prefHeight="28.0" prefWidth="357.0" text="  Update Your Details Here" AnchorPane.topAnchor="5.0">
+                                       <font>
+                                          <Font name="Verdana Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="UpdateDetailClosePane" layoutX="-1.0" layoutY="35.0" prefHeight="10.0" prefWidth="818.0" AnchorPane.leftAnchor="1.0" />
+                              <Label fx:id="massageItemUpdateCode" layoutX="26.0" layoutY="92.0" prefHeight="18.0" prefWidth="235.0" textFill="#a91a1a" AnchorPane.topAnchor="86.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="massageItemUpdateName" layoutX="25.0" layoutY="149.0" prefHeight="18.0" prefWidth="236.0" textFill="#a91a1a">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="massageItemUpdateBrand" layoutX="26.0" layoutY="210.0" prefHeight="18.0" prefWidth="235.0" textFill="#a91a1a">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="massageItemUpdateQuantity" layoutX="277.0" layoutY="149.0" prefHeight="18.0" prefWidth="260.0" textFill="#a91a1a">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="massageUpdateItemPrice" layoutX="272.0" layoutY="92.0" prefHeight="18.0" prefWidth="265.0" textFill="#a91a1a" AnchorPane.topAnchor="86.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="massageItemUpdateCategory" layoutX="277.0" layoutY="210.0" prefHeight="18.0" prefWidth="236.0" textFill="#a91a1a">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="massageItemUpdateDate" layoutX="572.0" layoutY="92.0" prefHeight="18.0" prefWidth="236.0" textFill="#a91a1a" AnchorPane.topAnchor="86.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="ItemDeletePane" prefHeight="505.0" prefWidth="818.0" visible="false" AnchorPane.leftAnchor="34.0" AnchorPane.topAnchor="30.0">
+                     <children>
+                        <AnchorPane fx:id="DeleteTableViewPane" layoutX="9.0" layoutY="9.0" prefHeight="284.0" prefWidth="802.0">
+                           <children>
+                              <TableView fx:id="ItemDeleteTable" layoutX="12.0" layoutY="14.0" prefHeight="259.0" prefWidth="783.0">
+                                <columns>
+                                  <TableColumn fx:id="DeleteViewItemCode" prefWidth="81.60001373291016" styleClass="TableHeadingPane" text="Item Code" />
+                                  <TableColumn fx:id="DeleteViewItemName" prefWidth="111.199951171875" styleClass="TableHeadingPane" text="Item Name" />
+                                    <TableColumn fx:id="DeleteViewItemBrand" prefWidth="98.39999389648438" styleClass="TableHeadingPane" text="Item Brand" />
+                                    <TableColumn fx:id="DeleteViewItemPrice" prefWidth="107.99993896484375" styleClass="TableHeadingPane" text="Item Price" />
+                                    <TableColumn fx:id="DeleteViewItemQuantity" prefWidth="83.19998168945312" styleClass="TableHeadingPane" text="Quantity" />
+                                    <TableColumn fx:id="DeleteViewItemCategory" prefWidth="96.79998779296875" styleClass="TableHeadingPane" text="Item Category" />
+                                    <TableColumn fx:id="DeleteViewItemPurchasedDate" prefWidth="113.5999755859375" styleClass="TableHeadingPane" text="Purchased Date" />
+                                    <TableColumn fx:id="DeleteViewItemImage" prefWidth="98.0" styleClass="TableHeadingPane" text="Item Image" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="ItemDeleteSearchPane" layoutX="9.0" layoutY="321.0" prefHeight="170.0" prefWidth="795.0">
+                           <children>
+                              <AnchorPane fx:id="ItemDeleteHeadingPane" layoutX="-2.0" prefHeight="42.0" prefWidth="802.0" AnchorPane.leftAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="31.0" layoutY="5.0" prefHeight="9.0" prefWidth="466.0" text="Select or Search Here to Delete an Item" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="23.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutY="37.0" prefHeight="26.0" prefWidth="802.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                              <TextField fx:id="DeleteSearchBar" layoutX="59.0" layoutY="74.0" prefHeight="39.0" prefWidth="282.0" promptText="Search Item By Code">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="DeleteSearchButton" layoutX="281.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#DeleteItemByItemCode" prefHeight="40.0" prefWidth="59.0">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/magni.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="DeleteButton" layoutX="436.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#DeleteDetails" prefHeight="35.0" prefWidth="88.0" text="Delete" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="RandomDealerSelectionPane" layoutX="13.0" layoutY="12.0" prefHeight="530.0" prefWidth="845.0" visible="false">
+                     <children>
+                        <AnchorPane fx:id="RandomDealerSelectionHeadingPane" prefHeight="61.0" prefWidth="846.0" AnchorPane.leftAnchor="0.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="10.0" text="Click On the Generate Dealers Button To Select four Random Dealers" textFill="#19382c">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="SelectRandomDealerCutterPane" layoutX="-2.0" layoutY="47.0" prefHeight="486.0" prefWidth="846.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <AnchorPane fx:id="RandomSelectionTablePane" layoutX="11.0" layoutY="56.0" prefHeight="378.0" prefWidth="822.0">
+                           <children>
+                              <TableView fx:id="GeneratedViewDealerTable" layoutX="14.0" layoutY="12.0" prefHeight="349.0" prefWidth="788.0">
+                                <columns>
+                                  <TableColumn fx:id="GeneratedViewDealerName" prefWidth="270.0" styleClass="RandomDealerTableHeading" text="Dealer Name" />
+                                  <TableColumn fx:id="GeneratedViewContactNumber" minWidth="0.0" prefWidth="270.0" styleClass="RandomDealerTableHeading" text="Contact Number" />
+                                    <TableColumn fx:id="GeneratedViewDealerLocation" prefWidth="270.0" styleClass="RandomDealerTableHeading" text="Dealer Location" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="GenerateRandomDealersButton" layoutX="34.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#GenerateDealers" prefHeight="42.0" prefWidth="166.0" text="Generate Dealers">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="SelectedRandomDealersPane" layoutX="13.0" layoutY="11.0" prefHeight="534.0" prefWidth="850.0" visible="false">
+                     <children>
+                        <AnchorPane layoutX="12.0" layoutY="11.0" prefHeight="145.0" prefWidth="826.0" styleClass="backPaneWhite" AnchorPane.bottomAnchor="378.0" AnchorPane.topAnchor="11.0">
+                           <children>
+                              <AnchorPane fx:id="sortingMassage" prefHeight="59.0" prefWidth="826.0">
+                                 <children>
+                                    <AnchorPane layoutY="31.0" prefHeight="44.0" prefWidth="826.0" style="-fx-background-color: white;" />
+                                    <Label layoutX="26.0" text="This Table is Sorted according to the Location" AnchorPane.topAnchor="2.0">
+                                       <font>
+                                          <Font name="Gill Sans MT Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="SortedSelectedDealersTable" layoutX="5.0" layoutY="33.0" prefHeight="106.0" prefWidth="817.0">
+                                <columns>
+                                  <TableColumn fx:id="SortedSelectedDealerName" prefWidth="204.0000343322754" text="Dealer Name" />
+                                  <TableColumn fx:id="SortedSelectedDealerContactNumber" minWidth="0.0" prefWidth="284.79994201660156" text="Contact Number" />
+                                    <TableColumn fx:id="SortedSelectedDealerLocation" minWidth="0.0" prefWidth="328.79998779296875" text="Location" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="164.0" prefHeight="177.0" prefWidth="406.0" styleClass="backPaneWhite">
+                           <children>
+                              <AnchorPane prefHeight="42.0" prefWidth="406.0" styleClass="DealersIndividualTableHeading">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="7.0" text="1. " textFill="#fff9f9" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="5.0">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Dealer1Name" layoutX="35.0" layoutY="6.0" text="Dealer's are not generated" textFill="WHITE" AnchorPane.topAnchor="6.0">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutY="33.0" prefHeight="137.0" prefWidth="406.0" styleClass="whiteShaperDealers">
+                                 <children>
+                                    <TableView fx:id="SelectedDealer1Table" layoutX="6.0" layoutY="5.0" prefHeight="127.0" prefWidth="398.0" AnchorPane.leftAnchor="6.0">
+                                      <columns>
+                                        <TableColumn fx:id="Dealer1ItemName" prefWidth="96.79999160766602" text="Item Name" />
+                                        <TableColumn fx:id="Dealer1ItemBrand" prefWidth="105.60000610351562" text="Item Brand" />
+                                          <TableColumn fx:id="Dealer1ItemPrice" prefWidth="107.19996643066406" text="Item Price" />
+                                          <TableColumn fx:id="Dealer1ItemQuantity" prefWidth="88.79998779296875" text="Item Quantity" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                        <AnchorPane layoutX="435.0" layoutY="163.0" prefHeight="179.0" prefWidth="406.0" styleClass="backPaneWhite">
+                           <children>
+                              <AnchorPane prefHeight="45.0" prefWidth="406.0" styleClass="DealersIndividualTableHeading">
+                                 <children>
+                                    <Label layoutX="14.0" text="2. " textFill="#fff9f9" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="5.0">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Dealer2Name" layoutX="35.0" layoutY="6.0" text="Dealer's are not generated" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutY="34.0" prefHeight="138.0" prefWidth="406.0" styleClass="whiteShaperDealers">
+                                 <children>
+                                    <TableView fx:id="SelectedDealer2Table" layoutX="4.0" layoutY="5.0" prefHeight="127.0" prefWidth="398.0">
+                                       <columns>
+                                          <TableColumn fx:id="Dealer2ItemName" prefWidth="96.79999160766602" text="Item Name" />
+                                          <TableColumn fx:id="Dealer2ItemBrand" prefWidth="105.60000610351562" text="Item Brand" />
+                                          <TableColumn fx:id="Dealer2ItemPrice" prefWidth="107.19996643066406" text="Item Price" />
+                                          <TableColumn fx:id="Dealer2ItemQuantity" prefWidth="88.79998779296875" text="Item Quantity" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="354.0" prefHeight="170.0" prefWidth="406.0" styleClass="backPaneWhite">
+                           <children>
+                              <AnchorPane layoutY="-3.0" prefHeight="50.0" prefWidth="406.0" styleClass="DealersIndividualTableHeading">
+                                 <children>
+                                    <Label layoutX="20.0" text="3. " textFill="#fff9f9" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="5.0">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Dealer3Name" layoutX="44.0" layoutY="6.0" text="Dealer's are not generated" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutY="31.0" prefHeight="137.0" prefWidth="406.0" styleClass="whiteShaperDealers">
+                                 <children>
+                                    <TableView fx:id="SelectedDealer3Table" layoutX="10.0" layoutY="5.0" prefHeight="127.0" prefWidth="398.0" AnchorPane.leftAnchor="6.0">
+                                       <columns>
+                                          <TableColumn fx:id="Dealer3ItemName" prefWidth="96.79999160766602" text="Item Name" />
+                                          <TableColumn fx:id="Dealer3ItemBrand" prefWidth="105.60000610351562" text="Item Brand" />
+                                          <TableColumn fx:id="Dealer3ItemPrice" prefWidth="107.19996643066406" text="Item Price" />
+                                          <TableColumn fx:id="Dealer3ItemQuantity" prefWidth="88.79998779296875" text="Item Quantity" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                        <AnchorPane layoutX="435.0" layoutY="355.0" prefHeight="168.0" prefWidth="406.0" styleClass="backPaneWhite">
+                           <children>
+                              <AnchorPane layoutX="1.0" layoutY="-4.0" prefHeight="52.0" prefWidth="406.0" styleClass="DealersIndividualTableHeading">
+                                 <children>
+                                    <Label layoutX="29.0" layoutY="4.0" text="4. " textFill="#fff9f9" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="5.0">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Dealer4Name" layoutX="32.0" layoutY="7.0" text="Dealer's are not generated" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="1.0" layoutY="33.0" prefHeight="122.0" prefWidth="406.0" styleClass="whiteShaperDealers">
+                                 <children>
+                                    <TableView fx:id="SelectedDealer4Table" layoutX="14.0" layoutY="3.0" prefHeight="127.0" prefWidth="398.0" AnchorPane.leftAnchor="4.0">
+                                       <columns>
+                                          <TableColumn fx:id="Dealer4ItemName" prefWidth="96.79999160766602" text="Item Name" />
+                                          <TableColumn fx:id="Dealer4ItemBrand" prefWidth="105.60000610351562" text="Item Brand" />
+                                          <TableColumn fx:id="Dealer4ItemPrice" prefWidth="107.19996643066406" text="Item Price" />
+                                          <TableColumn fx:id="Dealer4ItemQuantity" prefWidth="88.79998779296875" text="Item Quantity" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="SelectedIndividualDealerPane" layoutX="9.0" layoutY="14.0" prefHeight="530.0" prefWidth="848.0" visible="false">
+                     <children>
+                        <AnchorPane fx:id="SelectedDealerHeadingPane" layoutX="-1.0" prefHeight="55.0" prefWidth="850.0" AnchorPane.bottomAnchor="475.2" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="33.0" layoutY="12.0" text="Search Here To See The Selected Dealer's Items" AnchorPane.topAnchor="8.0">
+                                 <font>
+                                    <Font name="Calibri Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="normalPaneSelectedPane" layoutY="46.0" prefHeight="474.0" prefWidth="848.0">
+                           <children>
+                              <AnchorPane fx:id="SelectedDealerTablePane" layoutX="10.0" layoutY="199.0" prefHeight="278.0" prefWidth="831.0">
+                                 <children>
+                                    <TableView fx:id="SingleDealerViewTable" layoutX="14.0" layoutY="66.0" prefHeight="197.0" prefWidth="802.0">
+                                      <columns>
+                                        <TableColumn fx:id="SingleDealerItemName" prefWidth="212.7999610900879" styleClass="LowerSelectedDealerHeading" text="Item Name" />
+                                        <TableColumn fx:id="SingleDealerItemBrand" prefWidth="238.40000915527344" styleClass="LowerSelectedDealerHeading" text="Item Brand" />
+                                          <TableColumn fx:id="SingleDealerItemPrice" prefWidth="215.20001220703125" styleClass="LowerSelectedDealerHeading" text="Item Price" />
+                                          <TableColumn fx:id="SingleDealerItemQuantity" prefWidth="136.0" styleClass="LowerSelectedDealerHeading" text="Item Quantity" />
+                                      </columns>
+                                    </TableView>
+                                    <TextField fx:id="SearchBarPaneDealers" layoutX="26.0" layoutY="14.0" prefHeight="34.0" prefWidth="318.0" promptText="Search Here by Dealer Name">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button fx:id="SearchDealerButton" layoutX="277.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#SelectDealerDetails" prefHeight="34.0" prefWidth="66.0">
+                                       <graphic>
+                                          <ImageView fitHeight="30.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true" rotate="114.1">
+                                             <image>
+                                                <Image url="@images/magni.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="SelectedDealerSearchBarPane" layoutX="14.0" layoutY="12.0" prefHeight="168.0" prefWidth="824.0">
+                                 <children>
+                                    <TableView fx:id="SelectedDealerViewTable" layoutX="14.0" layoutY="7.0" prefHeight="154.0" prefWidth="795.0">
+                                      <columns>
+                                        <TableColumn fx:id="SelectedDealerViewDealerName" prefWidth="223.9999885559082" styleClass="UpperSelectedDealerTable" text="Dealer Name" />
+                                        <TableColumn fx:id="SelectedDealerViewContactNumber" prefWidth="293.5999755859375" styleClass="UpperSelectedDealerTable" text="Contact Number" />
+                                          <TableColumn fx:id="SelectedDealerViewLocation" prefWidth="280.800048828125" styleClass="UpperSelectedDealerTable" text="Location" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </AnchorPane>
+
+   <stylesheets>
+      <URL value="@Hello.css" />
+   </stylesheets>
+</StackPane>

@@ -1,0 +1,15 @@
+dealerName:James Murphy
+contactNo:011 5878675
+location:Badulla
+itemName:Computer Chairs
+itemBrand:Arpico
+itmPrice:Rs.25000.00
+itmQuantity:20
+itemName:Network Cables
+itemBrand:Lenson
+itmPrice:Rs.70000.00
+itmQuantity:25
+itemName:Router
+itemBrand:SLT
+itmPrice:Rs.4500.00
+itmQuantity:10

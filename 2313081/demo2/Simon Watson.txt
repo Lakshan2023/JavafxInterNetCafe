@@ -1,0 +1,15 @@
+dealerName:Simon Watson
+contactNo:011 4768579
+location:Galle
+itemName:Work Station Table
+itemBrand:Singer
+itmPrice:Rs.20375.00
+itmQuantity:18
+itemName:Key Boar
+itemBrand:Axus
+itmPrice:Rs.5490.00
+itmQuantity:12
+itemName:UPS
+itemBrand:Pro Link
+itmPrice:Rs.7865.00
+itmQuantity:10

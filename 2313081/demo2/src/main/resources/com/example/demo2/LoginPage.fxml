@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="LoginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#LoginPaneDragDetected" onMousePressed="#LoginPanePressed" prefHeight="691.0" prefWidth="428.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginManager.LoginPage">
+   <children>
+      <AnchorPane fx:id="signIn" prefHeight="630.0" prefWidth="428.0">
+         <children>
+            <ImageView fitHeight="120.0" fitWidth="123.0" layoutX="154.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="154.0" AnchorPane.rightAnchor="154.0">
+               <image>
+                  <Image url="@images/Admin.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="125.0" layoutY="192.0" prefHeight="51.0" prefWidth="209.0" text=" Sign In Account" textFill="#136634" AnchorPane.bottomAnchor="448.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="192.0">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <TextField fx:id="UserName" layoutX="57.0" layoutY="262.0" prefHeight="40.0" prefWidth="328.0" promptText="User Name" styleClass="logField" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="hidePassword" layoutX="61.0" layoutY="327.0" prefHeight="40.0" prefWidth="328.0" promptText="Password" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font>
+            </PasswordField>
+            <TextField fx:id="Password" layoutX="61.0" layoutY="327.0" prefHeight="40.0" prefWidth="328.0" promptText="Password" styleClass="logField" visible="false" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+               <font>
+                  <Font name="Times New Roman Bold" size="19.0" />
+               </font>
+            </TextField>
+            <CheckBox fx:id="showPassword" layoutX="65.0" layoutY="378.0" mnemonicParsing="false" onAction="#showPasswordField" prefHeight="42.0" prefWidth="167.0" text="Show Password" AnchorPane.leftAnchor="50.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </CheckBox>
+            <Button layoutX="65.0" layoutY="439.0" mnemonicParsing="false" onMouseClicked="#Login" prefHeight="42.0" prefWidth="328.0" styleClass="logButton" text="Login" AnchorPane.leftAnchor="50.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="142.0" layoutY="561.0" text="Register Account">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="65.0" layoutY="597.0" mnemonicParsing="false" onMouseClicked="#CreateAccount" prefHeight="42.0" prefWidth="328.0" styleClass="logButton" text="Create Account" textAlignment="CENTER" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <AnchorPane prefHeight="44.0" prefWidth="428.0" style="-fx-background-color: #02224d;">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" text="OneNet Cafe Inventory System" textFill="#fffefe">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="LoginMinimise" layoutX="312.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#MinimiseTheProgram" prefHeight="30.0" prefWidth="30.0" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="8.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/minimize-icon-3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="LoginClose" layoutX="370.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#ExitProgram" prefHeight="30.0" prefWidth="36.0" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="8.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/maximize4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label fx:id="SignInMassage" layoutX="50.0" layoutY="501.0" prefHeight="51.0" prefWidth="328.0" textFill="#e70000">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="signUp" layoutX="10.0" layoutY="10.0" onMouseClicked="#MinimiseTheProgram" prefHeight="650.0" prefWidth="466.0" visible="false">
+         <children>
+            <ImageView fitHeight="109.0" fitWidth="110.0" layoutX="160.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Admin.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="107.0" layoutY="170.0" prefHeight="69.0" prefWidth="214.0" text="Sign Up Account" textAlignment="CENTER" textFill="#3b437b" AnchorPane.bottomAnchor="452.0" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="107.0" AnchorPane.topAnchor="170.0">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="SignUpPassword" layoutX="50.0" layoutY="316.0" prefHeight="40.0" prefWidth="328.0" promptText="Password" styleClass="logField" AnchorPane.leftAnchor="50.0">
+               <font>
+                  <Font name="Times New Roman Bold" size="19.0" />
+               </font>
+            </PasswordField>
+            <Button layoutX="50.0" layoutY="465.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="42.0" prefWidth="328.0" styleClass="logButton" text="Sign Up" AnchorPane.leftAnchor="50.0">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Label layoutX="142.0" layoutY="577.0" prefHeight="26.0" prefWidth="145.0" text="Sign In Account" AnchorPane.leftAnchor="142.0" AnchorPane.rightAnchor="141.0">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Button layoutX="50.0" layoutY="612.0" mnemonicParsing="false" onMouseClicked="#GoToLoginAccount" prefHeight="42.0" prefWidth="328.0" styleClass="logButton" text="Login Acccount" AnchorPane.leftAnchor="50.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="SignUpUserName" layoutX="50.0" layoutY="252.0" prefHeight="40.0" prefWidth="328.0" promptText="User Name" styleClass="logField" AnchorPane.leftAnchor="50.0">
+               <font>
+                  <Font name="Times New Roman Bold" size="19.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="SignUpConfirmPassword" layoutX="50.0" layoutY="385.0" prefHeight="40.0" prefWidth="328.0" promptText="Confirm Password" AnchorPane.leftAnchor="50.0">
+               <font>
+                  <Font name="Times New Roman Bold" size="19.0" />
+               </font>
+            </PasswordField>
+            <AnchorPane prefHeight="44.0" prefWidth="428.0" style="-fx-background-color: #02224d;">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" text="OneNet Cafe Inventory System" textFill="#fffefe">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="LoginMinimise" layoutX="312.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#MinimiseTheProgram" prefHeight="30.0" prefWidth="30.0" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="8.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/minimize-icon-3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="LoginClose" layoutX="370.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#ExitProgram" prefHeight="30.0" prefWidth="36.0" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="8.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/maximize4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label fx:id="SignUpMassage" layoutX="51.0" layoutY="514.0" prefHeight="63.0" prefWidth="328.0" />
+         </children>
+      </AnchorPane>
+   </children>
+
+   <stylesheets>
+      <URL value="@Hello.css" />
+   </stylesheets>
+</StackPane>
